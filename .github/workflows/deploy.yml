@@ -1,0 +1,40 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.5'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
+
+    - name: Build and Deploy to Koyeb
+      env:
+        KOYEB_API_KEY: ${{ secrets.KOYEB_API_KEY }}
+        KOYEB_APP_ID: ${{ secrets.KOYEB_APP_ID }}
+      run: |
+        zip -r RedBricks.zip .
+
+        curl -X POST \
+          -H "Authorization: Bearer $KOYEB_API_KEY" \
+          -F "source=@RedBricks.zip" \
+          "https://app.koyeb.com/v1/apps/$KOYEB_APP_ID/deploy"
