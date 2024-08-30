@@ -45,7 +45,7 @@ Once the application is running, navigate to http://127.0.0.1:8000/docs to acces
 
 ## API Endpoint
 
-- POST /predict-sentiment: Predicts the sentiment of a given tweet.
+- POST /predict: Predicts the sentiment of a given tweet.
 
 Request Example:
 
