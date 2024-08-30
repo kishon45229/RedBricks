@@ -76,13 +76,20 @@ This project is integrated with a CI/CD pipeline using GitHub Actions. The pipel
 - Testing: Runs sample tests to ensure functionality.
 - Deployment: Automatically deploys to Koyeb upon successful testing.
 
+## Read More
+
+I have written a detailed article on deploying a FastAPI application on Koyeb with an automated CI/CD pipeline using GitHub Actions. You can read it on Medium:
+[Deploying a FastAPI Deep Learning Application on Koyeb with Automated CI/CD Pipeline using GitHub Actions](https://medium.com/@kishon45229/deploying-a-fastapi-deep-learning-application-on-koyeb-with-automated-ci-cd-pipeline-using-github-ec8c2e5fb105).
+
+This article covers step-by-step instructions on setting up the deployment and CI/CD pipeline, with examples and code snippets to help you follow along.
+
 ## Contributing
 
 Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/kishon45229/RedBricks/blob/9cd24cb9c3376d0dbcc9a7f2354f0c24d07a193f/LICENSE).
 
 ## Acknowledgements
 
