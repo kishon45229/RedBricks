@@ -18,8 +18,8 @@ The application is deployed and accessible at: [Koyeb Deployment Link](http://th
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/kishon45229/RedBricks.git
+cd RedBricks
 ```
 ### 2. Install Dependencies
 
