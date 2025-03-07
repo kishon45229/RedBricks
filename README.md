@@ -39,10 +39,6 @@ uvicorn main:app --reload
 
 Replace `main:app` with the appropriate module and app name if different.
 
-### 4. Access the API Documentation
-
-Once the application is running, navigate to http://127.0.0.1:8000/docs to access the interactive API documentation powered by Swagger UI.
-
 ## API Endpoint
 
 - POST /predict: Predicts the sentiment of a given tweet.
