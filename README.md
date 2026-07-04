@@ -34,14 +34,14 @@ pip install -r requirements.txt
 To run the application locally, use:
 
 ```bash
-uvicorn main:app --reload
+uvicorn RedBricks:app --reload
 ```
-
-Replace `main:app` with the appropriate module and app name if different.
 
 ## API Endpoint
 
-- POST /predict: Predicts the sentiment of a given tweet.
+- POST /predict/: Predicts the sentiment of a given tweet.
+- POST /predict/batch/: Predicts sentiment for a list of tweets.
+- POST /predict/xquik-export/: Predicts sentiment for tweets parsed from a Xquik JSON, JSONL, or CSV export.
 
 Request Example:
 
@@ -54,7 +54,16 @@ Request Example:
 Response Example:
 ```bash
 {
-  "sentiment": "Happy"
+  "predicted_sentiment": "Happy"
+}
+```
+
+Xquik Export Request Example:
+
+```bash
+{
+  "filename": "tweets.jsonl",
+  "export": "{\"tweet\":\"It's a great day!\"}"
 }
 ```
 
@@ -91,7 +100,5 @@ This project is licensed under the [MIT License](https://github.com/kishon45229/
 
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework.
 - [Koyeb](https://app.koyeb.com/) for the hosting platform.
-
-
 
 
